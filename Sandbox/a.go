@@ -6,8 +6,8 @@ import (
 	"os"
 )
 
-func solve(s int64, n int64) int64 {
-	return s / (n * n)
+func solve(a int64, b int64) int64 {
+	return a + b
 }
 
 func main() {
@@ -15,10 +15,10 @@ func main() {
 	out := bufio.NewWriter(os.Stdout)
 	defer out.Flush()
 
-	var T int
-	var s, n int64
-	for Fscan(in, &T); T > 0; T-- {
-		Fscan(in, &n, &s)
-		Fprintln(out, solve(s, n))
+	var t int
+	var a, b int64
+	for Fscan(in, &t); t > 0; t-- {
+		Fscan(in, &a, &b)
+		Fprintln(out, solve(a, b))
 	}
 }
